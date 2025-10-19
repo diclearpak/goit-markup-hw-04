@@ -13,6 +13,7 @@
   --sixth-color: #f4f4fd;
   --seventh-color: #404bbf;
   --eigth-color: #31d0aa;
+  --ninth-color: #8e8f99;
 }
 
 body {
@@ -31,6 +32,9 @@ body {
   color: var(--second-color);
 }
 
+.main-heading {
+  z-index: 99;
+}
 .header-text,
 .footer-main-page {
   font-family: 'Raleway', sans-serif;
@@ -132,7 +136,7 @@ li {
   gap: 40px;
 }
 .hero {
-  background-image: url('hero-bg.png');
+  background-image: url('people-office1.png');
   /*can't set the background image */
 }
 .button-section-one {
@@ -192,6 +196,20 @@ p {
 .section2-list {
   display: flex;
   gap: 24px;
+}
+
+.section2-list-icons {
+  display: flex;
+  flex-direction: column;
+  width: 264px;
+  height: 112px;
+  border: 1px solid var(--ninth-color);
+  border-radius: 4px;
+  background-color: var(--sixth-color);
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  /* can't resize the svg's */
 }
 
 .team-section {
@@ -266,6 +284,10 @@ p {
   border-bottom: 1px solid var(--third-color);
   border-left: 1px solid var(--third-color);
   border-right: 1px solid var(--third-color);
+}
+
+.portfolio-list > li:hover {
+  box-shadow: 1px 2px #2e2f4214;
 }
 
 .portfolio-list > li > img {
