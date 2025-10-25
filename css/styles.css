@@ -71,6 +71,7 @@ body {
 
 a:hover {
   color: var(--seventh-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 header nav a {
@@ -80,6 +81,7 @@ header nav a {
 
 header nav a:hover {
   color: var(--seventh-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 header nav a::after {
   content: '';
@@ -97,6 +99,7 @@ header nav a::after {
 
 a:hover::after {
   opacity: 1;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .fw-500 {
   font-weight: 500;
@@ -136,8 +139,8 @@ li {
   gap: 40px;
 }
 .hero {
-  background-image: url('people-office1.png');
-  /*can't set the background image */
+  background-image: linear-gradient(to top, #2e2f42b2, #2e2f42b2),
+    url('../people-office1.png');
 }
 .button-section-one {
   text-align: center;
@@ -167,6 +170,7 @@ li {
 
 button:hover {
   background-color: var(--seventh-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 h3 {
@@ -209,7 +213,11 @@ p {
   gap: 8px;
   justify-content: center;
   align-items: center;
-  /* can't resize the svg's */
+}
+
+.section2-list-icons > svg {
+  width: 64px;
+  height: 64px;
 }
 
 .team-section {
@@ -249,6 +257,7 @@ p {
 }
 .link-icons:hover {
   background-color: var(--seventh-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icons {
   min-height: 40px;
@@ -280,19 +289,30 @@ p {
   flex-wrap: wrap;
   gap: 24px;
 }
+
 .portfolio-list > li {
   border-bottom: 1px solid var(--third-color);
   border-left: 1px solid var(--third-color);
   border-right: 1px solid var(--third-color);
 }
 
+.hidden-text {
+  visibility: hidden;
+}
+
 .portfolio-list > li:hover {
   box-shadow: 1px 2px #2e2f4214;
+  background-color: var(--fifth-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list > li > img {
   width: 360px;
   height: 360px;
+}
+.portfolio-list > li > img:hover {
+  visibility: hidden;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-list > li > h3,
@@ -340,4 +360,5 @@ footer {
 
 .social-links-icons a:hover {
   background-color: var(--eigth-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
