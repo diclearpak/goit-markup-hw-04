@@ -139,7 +139,7 @@ li {
   gap: 40px;
 }
 .hero {
-  background-image: linear-gradient(to top, #2e2f42b2, #2e2f42b2),
+  background-image: linear-gradient(#2e2f42b2, #2e2f42b2),
     url('../people-office1.png');
 }
 .button-section-one {
@@ -179,13 +179,13 @@ h3 {
   color: var(--first-color);
 }
 
+p {
+  color: var(--fourth-color);
+}
+
 .section2-list > li > h3 {
   margin: 8px;
   margin-left: 0;
-}
-
-p {
-  color: var(--fourth-color);
 }
 
 .section2 {
@@ -236,6 +236,13 @@ p {
   justify-content: center;
   align-items: center;
   gap: 24px;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
 }
 .team-section-list > li {
   height: 380px;
@@ -296,27 +303,50 @@ p {
   border-right: 1px solid var(--third-color);
 }
 
-.hidden-text {
-  visibility: hidden;
-}
-
-.portfolio-list > li:hover {
-  box-shadow: 1px 2px #2e2f4214;
-  background-color: var(--fifth-color);
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.portfolio-list > li > img {
+.image-box {
   width: 360px;
-  height: 360px;
-}
-.portfolio-list > li > img:hover {
-  visibility: hidden;
-  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 300px;
+  overflow: hidden;
+  position: relative;
 }
 
-.portfolio-list > li > h3,
-.portfolio-list > li > p {
+.image-box img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.image-box .hover-box {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--fifth-color);
+
+  transform: translateY(100%);
+  transition: transform 250ms;
+}
+
+.image-box:hover .hover-box {
+  transform: translateY(0);
+  color: var(--sixth-color);
+  padding: 32px 40px 32px;
+}
+
+.hover-box > p {
+  color: var(--sixth-color);
+}
+
+.portfolio-card {
+  width: 360px;
+  height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.portfolio-card > h3,
+.portfolio-card > p {
   padding-left: 16px;
 }
 
@@ -331,23 +361,32 @@ footer {
   flex-wrap: wrap;
   color: var(--sixth-color);
   height: 122px;
-  margin-left: 156px;
+  padding-left: 156px;
+  gap: 120px;
 }
 
 .text-section {
   width: 264px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
+
 .text-section > p,
 .media-section > p {
   color: var(--sixth-color);
 }
+
 .media-section {
   display: flex;
   flex-direction: column;
+  gap: 16px;
 }
+
 .media-section > p {
   font-weight: 500;
 }
+
 .social-links-icons {
   display: flex;
   gap: 16px;
