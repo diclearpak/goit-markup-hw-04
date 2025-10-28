@@ -324,7 +324,6 @@ p {
   padding-right: 32px;
   background-color: var(--fifth-color);
   letter-spacing: 1px;
-
   transform: translateY(100%);
   transition: transform 250ms;
 }
